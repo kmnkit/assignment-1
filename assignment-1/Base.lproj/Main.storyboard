@@ -95,7 +95,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="calculateButton" destination="0BI-2J-yEd" id="u8W-PI-1dq"/>
                         <outlet property="numberTextField1" destination="93t-ZC-k5W" id="HeH-BT-Uhk"/>
                         <outlet property="numberTextField2" destination="3Ld-Sm-tpq" id="fXv-EU-zlb"/>
                         <outlet property="numberTextField3" destination="9sA-Mc-Kiu" id="xNg-WU-CmF"/>

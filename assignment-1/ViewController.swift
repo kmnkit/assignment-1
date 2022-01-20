@@ -9,15 +9,13 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var numberTextField1: UITextField!
-    @IBOutlet weak var numberTextField2: UITextField!
-    @IBOutlet weak var numberTextField3: UITextField!
-    @IBOutlet weak var numberTextField4: UITextField!
-    @IBOutlet weak var numberTextField5: UITextField!
+    @IBOutlet private weak var numberTextField1: UITextField!
+    @IBOutlet private weak var numberTextField2: UITextField!
+    @IBOutlet private weak var numberTextField3: UITextField!
+    @IBOutlet private weak var numberTextField4: UITextField!
+    @IBOutlet private weak var numberTextField5: UITextField!
     
-    @IBOutlet weak var calculateButton: UIButton!
-    
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet private weak var resultLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +37,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if let x = string.rangeOfCharacter(from: NSCharacterSet.decimalDigits) {
-            return true
-        } else {
-            return false
-        }
+        string.rangeOfCharacter(from: NSCharacterSet.decimalDigits) != nil
     }
 
 }
